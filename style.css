@@ -1,0 +1,75 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+nav, section {
+  border: solid thin;
+  border-radius: 6px;
+  padding: 1ex;
+  margin: 2ex;
+}
+
+footer {
+  width: 95%;
+  margin: 2em auto;
+  border-top: solid thin;
+}
+
+header {
+  text-align: center;
+}
+
+#moi {
+  background-color: red;
+  box-shadow: 0 0 20px;
+}
+
+nav {
+  font-size: smaller;  
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 2px 2ex;
+}
+
+@media (max-width: 400px) {
+  nav > ul > li {
+    display: inline-block;
+    padding: 5px;
+  }
+  nav > ul ul {
+    display: none;
+  }
+}
+
+@media (min-width: 400px) {
+  #content { display: flex; }
+  #main { flex: 1 1 auto; }
+  nav { flex: 0 0 auto; }
+}
+
+@media (min-width: 1024px) {
+  #main {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  #main section {
+    flex: 1 1 auto;
+    min-width: 20%;
+  }
+}
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+nav li:hover ul {
+  background-color: red;
+  box-shadow: -1px -1px 2px;
+}
+
+section:nth-child(even) {
+  background-color: red;   
+  box-shadow: 0 0 20px; 
+}
